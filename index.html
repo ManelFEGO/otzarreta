@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Correcciones web Endermar · para Otzarreta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --rojo:#ED1941; --rojo-osc:#c21234; --rojo-suave:#fdeff2;
+  --tinta:#232025; --gris:#6b646a; --linea:#e4dee0; --fondo:#f7f5f5; --blanco:#fff;
+  --verde:#2c7a57; --verde-suave:#e8f3ee; --ambar:#8a6100; --ambar-suave:#fbf1dc;
+  --f:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--f);color:var(--tinta);background:var(--fondo);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+
+/* barra superior */
+.barra{position:sticky;top:0;z-index:50;background:var(--blanco);border-bottom:1px solid var(--linea);display:flex;align-items:center;gap:14px;padding:10px 18px;flex-wrap:wrap}
+.barra .logo{font-weight:700;letter-spacing:-.02em;color:var(--rojo);font-size:19px}
+.barra .sep{flex:1}
+.barra button,.barra a.btn{font-family:var(--f);font-size:14px;font-weight:600;border:1px solid var(--linea);background:var(--blanco);color:var(--tinta);padding:7px 13px;border-radius:999px;cursor:pointer;text-decoration:none}
+.barra button:hover{border-color:var(--rojo);color:var(--rojo)}
+.barra .prog{font-size:14px;color:var(--gris);font-variant-numeric:tabular-nums}
+
+/* pantallas */
+main{max-width:1180px;margin:0 auto;padding:0 18px 80px}
+section.pantalla{background:var(--blanco);border:1px solid var(--linea);border-radius:6px;margin:26px 0;padding:30px;scroll-margin-top:70px}
+.cab{display:flex;gap:20px;align-items:flex-start;border-bottom:3px solid var(--tinta);padding-bottom:16px;margin-bottom:22px;flex-wrap:wrap}
+.cab .txt{flex:1 1 420px;min-width:0}
+.cab h2{margin:0 0 8px;font-size:clamp(21px,2.6vw,28px);line-height:1.2;font-weight:700}
+.cab p{margin:0;color:var(--gris);max-width:70ch}
+.num{flex:none;font-weight:700;color:var(--rojo);font-size:15px;letter-spacing:.06em;text-align:right;text-transform:uppercase}
+.num b{display:block;font-size:40px;line-height:1}
+
+/* etiquetas */
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.tag{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:3px;background:#f0edee;color:var(--gris)}
+.tag.quien{background:var(--rojo-suave);color:var(--rojo-osc)}
+.tag.demo{background:var(--ambar-suave);color:var(--ambar)}
+.tag.publi{background:var(--rojo-suave);color:var(--rojo-osc)}
+
+/* columnas de páginas afectadas */
+.paginas{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:20px}
+.pag{border:1px solid var(--linea);border-radius:5px;overflow:hidden;min-width:0;background:var(--blanco)}
+.pag .ruta{background:var(--tinta);color:#fff;font-size:13.5px;font-weight:600;padding:8px 12px}
+.pag .url{font-size:12.5px;padding:7px 12px;background:#faf8f9;border-bottom:1px solid var(--linea);word-break:break-all}
+.pag .url a{color:var(--rojo-osc)}
+.pag figure{margin:0}
+.pag figcaption{font-size:12.5px;color:var(--gris);padding:8px 12px;border-top:1px solid var(--linea)}
+.zoom{border-top:6px solid var(--rojo-suave)}
+.zoom .et{font-size:12.5px;font-weight:600;color:var(--rojo-osc);padding:8px 12px 0}
+
+/* fichas de datos */
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:22px 0 0}
+.dato{border-left:3px solid var(--linea);padding:2px 0 2px 12px}
+.dato h3{margin:0 0 3px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--gris);font-weight:600}
+.dato p{margin:0;font-size:15px}
+.dato code{background:#f2eff0;padding:1px 5px;border-radius:3px;font-size:13.5px;word-break:break-word}
+
+/* franja roja */
+.franja{background:var(--rojo);color:#fff;font-weight:600;font-size:17px;padding:14px 18px;border-radius:4px;margin:22px 0 0;line-height:1.4}
+.franja span{display:block;font-size:13px;font-weight:500;opacity:.9;margin-top:4px}
+
+/* hecho */
+.hecho{margin-top:20px;border:1px dashed var(--linea);border-radius:5px;padding:14px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fbfafa}
+.hecho label{display:flex;gap:9px;align-items:center;font-weight:600;cursor:pointer}
+.hecho input[type=checkbox]{width:20px;height:20px;accent-color:var(--verde)}
+.hecho input[type=text]{font-family:var(--f);font-size:14px;padding:7px 10px;border:1px solid var(--linea);border-radius:4px;min-width:150px}
+section.pantalla.ok{border-color:var(--verde)}
+section.pantalla.ok .hecho{background:var(--verde-suave);border-color:var(--verde);border-style:solid}
+
+/* portada */
+.portada{background:var(--tinta);color:#fff;border:0}
+.portada h1{font-size:clamp(28px,5vw,44px);margin:0 0 10px;line-height:1.1;font-weight:700}
+.portada .lead{color:#d8d2d4;max-width:62ch;margin:0 0 26px}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:26px}
+.cifra{background:#2e2a2f;border-radius:5px;padding:16px 18px}
+.cifra b{display:block;font-size:34px;line-height:1;color:var(--rojo)}
+.cifra span{font-size:13.5px;color:#cdc7c9}
+.pasos{background:#2e2a2f;border-radius:5px;padding:18px 22px}
+.pasos ol{margin:0;padding-left:20px}
+.pasos li{margin-bottom:7px;color:#e9e5e6}
+.portada .pie{margin-top:22px;font-size:13.5px;color:#a9a2a5}
+
+/* índice */
+.indice{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin-top:22px}
+.indice a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:#fff;background:#2e2a2f;border-radius:4px;padding:9px 12px;font-size:14px}
+.indice a:hover{background:var(--rojo)}
+.indice a b{color:var(--rojo);font-size:13px}
+.indice a:hover b{color:#fff}
+
+/* final */
+.endermar{background:var(--rojo-suave);border-color:#f3c9d2}
+.endermar ul{margin:0;padding-left:20px}
+.endermar li{margin-bottom:10px}
+
+.navpie{display:flex;justify-content:space-between;gap:12px;margin-top:26px;border-top:1px solid var(--linea);padding-top:16px}
+.navpie a{font-size:14px;font-weight:600;color:var(--rojo-osc);text-decoration:none}
+
+@media print{
+  .barra,.navpie{display:none}
+  body{background:#fff;font-size:11pt}
+  main{max-width:none;padding:0}
+  section.pantalla{border:0;margin:0;padding:0 0 12mm;break-after:page;page-break-after:always}
+  .paginas{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="barra">
+  <span class="logo">endermar</span>
+  <span class="prog" id="prog">0 de 10 corregidas</span>
+  <span class="sep"></span>
+  <button onclick="location.hash='#portada'">Índice</button>
+  <button onclick="copiarResumen()">Copiar resumen para el correo</button>
+  <button onclick="window.print()">Imprimir / PDF</button>
+</div>
+
+<main>
+
+<section class="pantalla portada" id="portada">
+  <h1>Correcciones pendientes de la web</h1>
+  <p class="lead">Este documento sustituye a las listas por correo. Cada pantalla contiene un solo fallo, dónde está exactamente, cómo debe quedar y cómo lo comprobaremos. Entorno revisado el <strong>miércoles 30 de septiembre de 2026</strong>, a las 16:20.</p>
+
+  <div class="cifras">
+    <div class="cifra"><b>10</b><span>correcciones en total</span></div>
+    <div class="cifra"><b>6</b><span>bloquean la presentación a dirección</span></div>
+    <div class="cifra"><b>4</b><span>bloquean la publicación</span></div>
+    <div class="cifra"><b>5</b><span>entregas pendientes de Endermar</span></div>
+  </div>
+
+  <div class="pasos">
+    <ol>
+      <li>Bajad por el documento: cada pantalla es una corrección, numerada.</li>
+      <li>En cada una tenéis la URL, la ruta del menú y la captura con el fallo marcado en rojo.</li>
+      <li>Al terminarla, marcad la casilla «Hecho» y poned fecha y nombre.</li>
+      <li>Cuando acabéis, pulsad «Copiar resumen para el correo» arriba y pegadlo en la respuesta.</li>
+    </ol>
+  </div>
+
+  <div class="indice">
+    <a href="#c1"><b>01</b> Enlaces del pie a páginas de la papelera</a>
+    <a href="#c2"><b>02</b> La tarjeta de Monitores tiene el texto de Mayores</a>
+    <a href="#c3"><b>03</b> «Adjuntar CV» en los formularios comerciales</a>
+    <a href="#c4"><b>04</b> Dos fotos con caras de niños reconocibles</a>
+    <a href="#c5"><b>05</b> La cabecera de Nutrición es una foto de eventos</a>
+    <a href="#c6"><b>06</b> Madrid aparece con el teléfono de Zaragoza</a>
+    <a href="#c7"><b>07</b> «Política de cookies» lleva a una página vacía</a>
+    <a href="#c8"><b>08</b> «Accesibilidad» no lleva a ninguna parte</a>
+    <a href="#c9"><b>09</b> El menú en catalán tiene dos palabras en castellano</a>
+    <a href="#c10"><b>10</b> Las diapositivas 3 y 4 repiten la primera</a>
+    <a href="#endermar"><b>+</b> Lo que enviamos nosotros</a>
+  </div>
+
+  <p class="pie">Entorno de pruebas: endermar.digitalotzarreta.com · versión catalana en /ca/ · Endermar, Marketing y Comunicación.</p>
+</section>
+
+
+<!-- 1 -->
+<section class="pantalla" id="c1" data-n="1">
+  <div class="cab">
+    <div class="txt">
+      <h2>Los enlaces del pie llevan a direcciones de la papelera</h2>
+      <p>En el pie de todas las páginas, «Calidad» y los seis servicios apuntan a direcciones que contienen <code>__trashed</code>, que es como WordPress marca lo que está en la papelera. El visitante acaba en la página correcta porque hay un desvío automático, pero la dirección que se publica es la equivocada. En la versión en catalán, además, esos enlaces llevan a las páginas en castellano.</p>
+    </div>
+    <div class="num">Corrección Nº<b>01</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Pie de página · versión en castellano</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/</a> (y el resto de páginas: el pie es el mismo)</div>
+      <figure><img src="img/c01-pie-es.jpg" alt="Pie de página en castellano con los enlaces marcados en rojo"><figcaption>Los siete enlaces marcados llevan a direcciones con <code>__trashed</code>.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z01-pie-es.jpg" alt="Detalle de la columna Servicios del pie"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Pie de página · versión en catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/ca/</a></div>
+      <figure><img src="img/c01-pie-ca.jpg" alt="Pie de página en catalán con los enlaces marcados en rojo"><figcaption>En catalán, los mismos enlaces llevan además a las páginas en castellano.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Dónde está</h3><p>Pie de página, columnas «Mapa web» (enlace «Calidad») y «Servicios» (los seis enlaces).</p></div>
+    <div class="dato"><h3>Qué buscar</h3><p>Pasad el ratón por encima de cada enlace y mirad si la dirección contiene <code>__trashed</code>.</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>Ningún enlace del pie contiene <code>__trashed</code>, y en la versión catalana llevan a las páginas de <code>/ca/</code>.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos la home, bajamos al pie y pulsamos los siete enlaces mirando la barra de direcciones. Repetimos en /ca/.</p></div>
+  </div>
+
+  <div class="franja">Enlazad los siete enlaces del pie a las direcciones definitivas, y los del pie catalán a las páginas en catalán.<span>Si hay páginas antiguas en la papelera, vaciadla para que no vuelvan a aparecer.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="1"> Hecho</label><input type="text" placeholder="Fecha" data-f="1"><input type="text" placeholder="Nombre" data-p="1"></div>
+  <div class="navpie"><a href="#portada">↑ Índice</a><a href="#c2">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 2 -->
+<section class="pantalla" id="c2" data-n="2">
+  <div class="cab">
+    <div class="txt">
+      <h2>La tarjeta de «Monitores Escolares» tiene el texto de Mayores</h2>
+      <p>En el bloque «Nuestros servicios» de la portada, la tarjeta de Monitores Escolares muestra, palabra por palabra, la misma descripción que la tarjeta de Centro de Mayores, que está justo al lado. Esa tarjeta tampoco tiene fotografía: el hueco aparece en blanco. Os pasamos el texto correcto abajo, en castellano y en catalán.</p>
+    </div>
+    <div class="num">Corrección Nº<b>02</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta, con el texto que damos aquí</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Inicio · bloque «Nuestros servicios» · castellano</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/</a></div>
+      <figure><img src="img/c02-monitores-es.jpg" alt="Tarjeta de Monitores Escolares con el mismo texto que la de Mayores"><figcaption>La tarjeta del centro repite el texto de la tarjeta de la derecha.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z02-monitores.jpg" alt="Detalle de la tarjeta de Monitores Escolares"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Inici · bloc «Els nostres serveis» · catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/ca/</a></div>
+      <figure><figcaption style="border-top:0;padding-top:14px">El mismo fallo está en la versión catalana: la targeta «Monitors escolars» dice «Restauració adaptada a centres de gent gran i residències…». Hay que cambiar las dos.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Qué buscar</h3><p>En la tarjeta de Monitores, el texto <code>Restauración adaptada a centros de mayores y residencias</code>.</p></div>
+    <div class="dato"><h3>Texto correcto en castellano</h3><p>«Monitores y directores de tiempo libre titulados que acompañan a los alumnos en el comedor, las acogidas y las actividades extraescolares.»</p></div>
+    <div class="dato"><h3>Texto correcto en catalán</h3><p>«Monitors i directors de lleure titulats que acompanyen els alumnes al menjador, a les acollides i a les activitats extraescolars.»</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>La tarjeta de Monitores tiene su propio texto y una fotografía, distintos de los de Mayores, en las dos versiones.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos la portada, bajamos a «Nuestros servicios» y leemos las tres primeras tarjetas. Repetimos en /ca/.</p></div>
+  </div>
+
+  <div class="franja">Aplicad el texto de Monitores en castellano y en catalán, y poned una fotografía en esa tarjeta.<span>La tarjeta de Eventos Personalizados también mezclaba texto de Proyectos de Mejora: revisadla de paso.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="2"> Hecho</label><input type="text" placeholder="Fecha" data-f="2"><input type="text" placeholder="Nombre" data-p="2"></div>
+  <div class="navpie"><a href="#c1">← Anterior</a><a href="#c3">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 3 -->
+<section class="pantalla" id="c3" data-n="3">
+  <div class="cab">
+    <div class="txt">
+      <h2>El formulario comercial pide «Adjuntar CV»</h2>
+      <p>En las seis páginas de servicio, el formulario «¿Hablamos?» incluye un campo para adjuntar el currículum. Ese formulario es comercial: lo rellena un colegio o una empresa que pide presupuesto, no una persona que busca trabajo. El currículum solo debe pedirse en «Trabaja con nosotros». Este campo no estaba la semana pasada: ha aparecido al añadir la casilla de privacidad.</p>
+    </div>
+    <div class="num">Corrección Nº<b>03</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Afecta a 6 páginas + sus versiones en catalán</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Menú Servicios / Centros Educativos</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/servicios/centros-educativos/" target="_blank" rel="noopener">…/servicios/centros-educativos/</a></div>
+      <figure><img src="img/c03-cv-centros.jpg" alt="Formulario comercial con el campo Adjuntar CV marcado en rojo"><figcaption>El campo aparece entre «Tipo de centro» y la casilla de privacidad.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z03-cv.jpg" alt="Detalle del campo Adjuntar CV"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Las otras cinco páginas, con el mismo fallo</div>
+      <div class="url">
+        <a href="https://endermar.digitalotzarreta.com/servicios/monitores/" target="_blank" rel="noopener">…/servicios/monitores/</a><br>
+        <a href="https://endermar.digitalotzarreta.com/servicios/mayores/" target="_blank" rel="noopener">…/servicios/mayores/</a><br>
+        <a href="https://endermar.digitalotzarreta.com/servicios/empresas/" target="_blank" rel="noopener">…/servicios/empresas/</a><br>
+        <a href="https://endermar.digitalotzarreta.com/servicios/eventos-personalizados/" target="_blank" rel="noopener">…/servicios/eventos-personalizados/</a><br>
+        <a href="https://endermar.digitalotzarreta.com/servicios/proyectos-de-mejora/" target="_blank" rel="noopener">…/servicios/proyectos-de-mejora/</a>
+      </div>
+      <figure><figcaption style="border-top:0;padding-top:14px">Y sus equivalentes en catalán: /ca/centres-educatius/, /ca/monitors/, /ca/gent-gran/, /ca/empreses/, /ca/esdeveniments-personalitzats/ y /ca/projectes-de-millora/.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Qué buscar</h3><p>En el formulario del final de la página, la etiqueta <code>Adjuntar CV</code> con su botón «Seleccionar archivo».</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>El formulario de las seis páginas de servicio tiene seis campos —nombre, teléfono, email, número de comensales, tipo de centro y mensaje— más la casilla de privacidad. Ningún campo pide currículum.</p></div>
+    <div class="dato"><h3>Dónde sí debe estar</h3><p>Solo en <code>/trabaja-con-nosotros/</code>, que es el formulario de candidaturas.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos las seis páginas de servicio, bajamos al formulario y contamos los campos. Y abrimos Trabaja con nosotros para ver que allí sí sigue.</p></div>
+  </div>
+
+  <div class="franja">Quitad el campo «Adjuntar CV» de los formularios de las seis páginas de servicio, en castellano y en catalán.<span>Motivo de fondo: un formulario comercial y uno de candidaturas recogen datos con finalidades distintas y no deben mezclarse.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="3"> Hecho</label><input type="text" placeholder="Fecha" data-f="3"><input type="text" placeholder="Nombre" data-p="3"></div>
+  <div class="navpie"><a href="#c2">← Anterior</a><a href="#c4">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 4 -->
+<section class="pantalla" id="c4" data-n="4">
+  <div class="cab">
+    <div class="txt">
+      <h2>Dos fotografías muestran caras de niños reconocibles</h2>
+      <p>No podemos publicar imágenes en las que se reconozca la cara de un menor: hace falta el permiso por escrito de sus padres o tutores, y no lo tenemos. Quedan dos fotografías así. No vale con recortar: hay que sustituirlas o desenfocar las caras hasta que nadie pueda reconocer a nadie.</p>
+    </div>
+    <div class="num">Corrección Nº<b>04</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag publi">Bloquea la publicación</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Inicio · tarjeta «Centros Educativos»</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/</a> · archivo <code>foto-Portada-proyecto-interactivo-1.jpg</code></div>
+      <figure><img src="img/c04-foto-centros.jpg" alt="Tarjeta de Centros Educativos con la foto marcada en rojo"><figcaption>Se reconocen varias caras de alumnos en la parte derecha de la foto.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z04-foto-centros.jpg" alt="Detalle de la fotografía de la tarjeta"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Menú Servicios / Monitores · galería</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/servicios/monitores/" target="_blank" rel="noopener">…/servicios/monitores/</a> · archivo <code>monit-3.jpg</code></div>
+      <figure><img src="img/c04-monit3.jpg" alt="Galería de Monitores con la segunda foto marcada en rojo"><figcaption>La foto de la derecha muestra varias caras de niños en primer plano.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z04-monit3.jpg" alt="Detalle de la fotografía monit-3"></div>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Cómo queda bien</h3><p>En ninguna página de la web se puede reconocer la cara de un menor, ni leerse el nombre de un colegio en un uniforme.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Repasamos las dos páginas y, además, todas las fotos del sitio, una por una, antes de dar el visto bueno.</p></div>
+    <div class="dato"><h3>Si necesitáis recambio</h3><p>Pedídnoslo y os pasamos fotos del banco de Endermar sin menores identificables.</p></div>
+  </div>
+
+  <div class="franja">Sustituid estas dos fotografías, o desenfocad las caras hasta que no se reconozca a ningún niño.<span>Las anteriores ya las resolvisteis: gracias. Estas dos se quedaron atrás.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="4"> Hecho</label><input type="text" placeholder="Fecha" data-f="4"><input type="text" placeholder="Nombre" data-p="4"></div>
+  <div class="navpie"><a href="#c3">← Anterior</a><a href="#c5">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 5 -->
+<section class="pantalla" id="c5" data-n="5">
+  <div class="cab">
+    <div class="txt">
+      <h2>La cabecera de Nutrición es una foto de catering de eventos</h2>
+      <p>La página de Nutrición habla de menús escolares diseñados por dietistas, pero se abre con una mesa de aperitivos de un evento. La imagen no corresponde al servicio del que habla la página.</p>
+    </div>
+    <div class="num">Corrección Nº<b>05</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Menú Calidad / Nutrición · cabecera</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/calidad/nutricion/" target="_blank" rel="noopener">…/calidad/nutricion/</a> · archivo <code>eventos-5.jpg</code></div>
+      <figure><img src="img/c05-nutricion.jpg" alt="Cabecera de Nutrición con una foto de catering de eventos"><figcaption>La cabecera muestra una mesa de eventos, no un comedor escolar.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z05-nutricion.jpg" alt="Detalle de la cabecera de Nutrición"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Versión en catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/nutricio/" target="_blank" rel="noopener">…/ca/nutricio/</a></div>
+      <figure><figcaption style="border-top:0;padding-top:14px">Misma cabecera, mismo cambio.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Cómo queda bien</h3><p>La cabecera muestra un comedor escolar o el trabajo de las dietistas, y no aparece ninguna cara de menor reconocible.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos la página de Nutrición en castellano y en catalán y miramos la imagen de arriba.</p></div>
+    <div class="dato"><h3>Quién aporta la foto</h3><p>Endermar. Os la enviamos con el resto del material.</p></div>
+  </div>
+
+  <div class="franja">Cambiad la cabecera de Nutrición por la fotografía de comedor escolar que os enviaremos.<span>Mientras tanto, dejad la página como está: es preferible a poner otra imagen de archivo.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="5"> Hecho</label><input type="text" placeholder="Fecha" data-f="5"><input type="text" placeholder="Nombre" data-p="5"></div>
+  <div class="navpie"><a href="#c4">← Anterior</a><a href="#c6">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 6 -->
+<section class="pantalla" id="c6" data-n="6">
+  <div class="cab">
+    <div class="txt">
+      <h2>Madrid aparece con el teléfono de Zaragoza</h2>
+      <p>En la página de Contacto, bajo «También puedes llamarnos», el teléfono de Madrid es el mismo que el de Zaragoza, y además lleva un signo «+» suelto delante. Quien llame desde Madrid acabará en Zaragoza.</p>
+    </div>
+    <div class="num">Corrección Nº<b>06</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag publi">Bloquea la publicación</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Menú Contacto · bloque «Atenderte es un gusto»</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/contacto/" target="_blank" rel="noopener">…/contacto/</a></div>
+      <figure><img src="img/c06-madrid.jpg" alt="Listado de teléfonos con Madrid y Zaragoza con el mismo número"><figcaption>Madrid: +976 908 060. Zaragoza: 976 908 060. Es el mismo número.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z06-madrid.jpg" alt="Detalle del listado de teléfonos"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Versión en catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/contacte/" target="_blank" rel="noopener">…/ca/contacte/</a></div>
+      <figure><figcaption style="border-top:0;padding-top:14px">Mismo listado, mismo cambio. En el pie de página el teléfono de Madrid ya lo quitasteis: ahí está correcto.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Qué buscar</h3><p>La línea <code>Madrid: Tel. +976 908 060</code>.</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>Madrid aparece sin teléfono, como en el pie, hasta que os confirmemos el número correcto. Y no queda ningún «+» suelto en los demás números.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos Contacto y leemos los cuatro teléfonos. Comprobamos que ninguno se repite entre delegaciones.</p></div>
+  </div>
+
+  <div class="franja">Quitad el teléfono de Madrid de la página de Contacto hasta que os pasemos el correcto.<span>Nos comprometimos a confirmároslo y seguimos sin hacerlo: es cosa nuestra.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="6"> Hecho</label><input type="text" placeholder="Fecha" data-f="6"><input type="text" placeholder="Nombre" data-p="6"></div>
+  <div class="navpie"><a href="#c5">← Anterior</a><a href="#c7">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 7 -->
+<section class="pantalla" id="c7" data-n="7">
+  <div class="cab">
+    <div class="txt">
+      <h2>«Política de cookies» del pie lleva a una página vacía</h2>
+      <p>En el pie, el enlace «Política de cookies» abre <code>/politica-de-cookies/</code>, que no tiene contenido: solo se ve la cabecera y el pie. La política buena, la que genera Complianz, está publicada en otra dirección: <code>/politica-de-cookies-ue/</code>. Hay que enlazar esa, o volcar su contenido en la primera y dejar una sola.</p>
+    </div>
+    <div class="num">Corrección Nº<b>07</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag publi">Bloquea la publicación</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Pie de página · zona legal</div>
+      <div class="url">Presente en todas las páginas</div>
+      <figure><img src="img/c07-pie-legales.jpg" alt="Zona legal del pie con los enlaces marcados"><figcaption>El enlace marcado a la izquierda es el de cookies.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z07-legales.jpg" alt="Detalle de los enlaces legales del pie"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">La página a la que lleva hoy</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/politica-de-cookies/" target="_blank" rel="noopener">…/politica-de-cookies/</a></div>
+      <figure><img src="img/c07b-cookies-vacia.jpg" alt="Página de política de cookies vacía"><figcaption>La página existe pero no tiene ni una línea de texto.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Cómo queda bien</h3><p>Al pulsar «Política de cookies» en el pie se abre la política completa, la que genera Complianz, en castellano y en catalán. No queda ninguna página legal vacía en el sitio.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Pulsamos el enlace desde el pie y leemos que aparece el listado de cookies. Repetimos en /ca/.</p></div>
+    <div class="dato"><h3>Lo que aportamos nosotros</h3><p>El aviso legal y la política de privacidad, que también están vacías. Os llegan con el material.</p></div>
+  </div>
+
+  <div class="franja">Haced que «Política de cookies» abra la política real y dejad una sola página de cookies en el sitio.<span>Comprobad también que la versión catalana enlaza a la política en catalán.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="7"> Hecho</label><input type="text" placeholder="Fecha" data-f="7"><input type="text" placeholder="Nombre" data-p="7"></div>
+  <div class="navpie"><a href="#c6">← Anterior</a><a href="#c8">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 8 -->
+<section class="pantalla" id="c8" data-n="8">
+  <div class="cab">
+    <div class="txt">
+      <h2>«Accesibilidad» no lleva a ninguna parte</h2>
+      <p>El último enlace del pie, «Accesibilidad», está puesto como <code>#</code>, que en la web significa «no vayas a ningún sitio». Se pulsa y no pasa nada. O tiene página o no debe estar en el pie.</p>
+    </div>
+    <div class="num">Corrección Nº<b>08</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag publi">Bloquea la publicación</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Pie de página · zona legal · última posición</div>
+      <div class="url">Presente en todas las páginas, también en /ca/</div>
+      <figure><img src="img/c07-pie-legales.jpg" alt="Zona legal del pie con Accesibilidad marcado"><figcaption>El enlace marcado a la derecha es «Accesibilidad».</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z07-legales.jpg" alt="Detalle de los enlaces legales del pie"></div>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Qué buscar</h3><p>El enlace «Accesibilidad», al final de la línea de enlaces legales.</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>El enlace desaparece del pie, o abre una página de declaración de accesibilidad con contenido.</p></div>
+    <div class="dato"><h3>Decisión de Endermar</h3><p>De momento, quitadlo. Si nuestro departamento jurídico nos dice que hace falta esa página, os lo diremos y os pasaremos el texto.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Miramos el pie: o no está, o al pulsarlo se abre una página con texto.</p></div>
+  </div>
+
+  <div class="franja">Quitad el enlace «Accesibilidad» del pie mientras no haya una página detrás.<span>No dejéis ningún enlace con «#» en todo el sitio: es la señal de que algo está a medias.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="8"> Hecho</label><input type="text" placeholder="Fecha" data-f="8"><input type="text" placeholder="Nombre" data-p="8"></div>
+  <div class="navpie"><a href="#c7">← Anterior</a><a href="#c9">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 9 -->
+<section class="pantalla" id="c9" data-n="9">
+  <div class="cab">
+    <div class="txt">
+      <h2>El menú en catalán tiene dos palabras en castellano</h2>
+      <p>En la versión catalana, el menú de arriba está traducido salvo dos entradas: «Calidad» y «Servicios». Son las dos que despliegan submenú. La mayoría de nuestros clientes están en Cataluña y ese menú es lo primero que ven.</p>
+    </div>
+    <div class="num">Corrección Nº<b>09</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Menú superior · versión en catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/ca/</a> y todas las páginas en /ca/</div>
+      <figure><img src="img/c09-menu-ca.jpg" alt="Menú en catalán con Calidad y Servicios sin traducir"><figcaption>Entre «Nosaltres» y «Treballa amb nosaltres» aparecen dos palabras en castellano.</figcaption></figure>
+      <div class="zoom"><div class="et">Detalle ampliado</div><img src="img/z09-menu-ca.jpg" alt="Detalle del menú en catalán"></div>
+    </div>
+    <div class="pag">
+      <div class="ruta">Pie de página · versión en catalán</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/ca/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/ca/</a></div>
+      <figure><figcaption style="border-top:0;padding-top:14px">En el pie catalán pasa lo mismo con «Calidad» en la columna «Mapa web». Se corrige a la vez que la corrección Nº 01.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Qué buscar</h3><p>Las palabras <code>Calidad</code> y <code>Servicios</code> dentro de cualquier página de /ca/.</p></div>
+    <div class="dato"><h3>Cómo queda bien</h3><p>El menú catalán dice <strong>Qualitat</strong> y <strong>Serveis</strong>, arriba y en el pie.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos /ca/ y leemos el menú de arriba y el del pie.</p></div>
+    <div class="dato"><h3>El resto del catalán</h3><p>Lo estamos revisando nosotros y os pasaremos las correcciones en un solo documento.</p></div>
+  </div>
+
+  <div class="franja">Traducid «Calidad» por «Qualitat» y «Servicios» por «Serveis» en el menú y en el pie de la versión catalana.<span>Son los dos únicos elementos del menú que quedaron sin traducir.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="9"> Hecho</label><input type="text" placeholder="Fecha" data-f="9"><input type="text" placeholder="Nombre" data-p="9"></div>
+  <div class="navpie"><a href="#c8">← Anterior</a><a href="#c10">Siguiente corrección →</a></div>
+</section>
+
+
+<!-- 10 -->
+<section class="pantalla" id="c10" data-n="10">
+  <div class="cab">
+    <div class="txt">
+      <h2>Las diapositivas 3 y 4 de la portada repiten la primera</h2>
+      <p>El carrusel de la portada tiene cuatro diapositivas. La segunda habla del Real Decreto 315/2025. La tercera y la cuarta repiten, palabra por palabra, el texto de la primera, y sus botones «Más información» no llevan a ninguna parte. Os pasamos los textos definitivos con el resto del material.</p>
+    </div>
+    <div class="num">Corrección Nº<b>10</b></div>
+  </div>
+  <div class="tags"><span class="tag quien">Lo arregla: Otzarreta, con el texto que enviaremos</span><span class="tag demo">Bloquea la presentación a dirección</span><span class="tag">Captura: 30/09/2026</span></div>
+
+  <div class="paginas">
+    <div class="pag">
+      <div class="ruta">Inicio · carrusel de cabecera · diapositiva 3</div>
+      <div class="url"><a href="https://endermar.digitalotzarreta.com/" target="_blank" rel="noopener">https://endermar.digitalotzarreta.com/</a> y <a href="https://endermar.digitalotzarreta.com/ca/" target="_blank" rel="noopener">/ca/</a></div>
+      <figure><img src="img/c11-slide3.jpg" alt="Diapositiva 3 con el mismo texto que la diapositiva 1"><figcaption>Tercera diapositiva: mismo titular y mismo párrafo que la primera.</figcaption></figure>
+    </div>
+    <div class="pag">
+      <div class="ruta">Qué falta en cada una</div>
+      <div class="url">Los botones «Más información» de las diapositivas 1, 3 y 4 están puestos como <code>#</code></div>
+      <figure><figcaption style="border-top:0;padding-top:14px">Mientras no tengáis los textos, dejad el carrusel con las dos diapositivas que sí tienen contenido propio. Es preferible a repetir el mismo mensaje cuatro veces.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ficha">
+    <div class="dato"><h3>Cómo queda bien</h3><p>Cada diapositiva tiene su propio titular, su propio texto y un botón que lleva a una página real. Ninguna repite a otra.</p></div>
+    <div class="dato"><h3>Cómo lo comprobamos</h3><p>Abrimos la portada, dejamos pasar las cuatro diapositivas y pulsamos cada botón.</p></div>
+    <div class="dato"><h3>Lo que aportamos nosotros</h3><p>Los textos de las diapositivas 3 y 4, en castellano y en catalán, con el destino de cada botón.</p></div>
+  </div>
+
+  <div class="franja">Dejad dos diapositivas hasta que os enviemos los textos, y conectad cada botón «Más información» a su página.<span>Ningún botón puede quedarse en «#» el día de la publicación.</span></div>
+  <div class="hecho"><label><input type="checkbox" data-c="10"> Hecho</label><input type="text" placeholder="Fecha" data-f="10"><input type="text" placeholder="Nombre" data-p="10"></div>
+  <div class="navpie"><a href="#c9">← Anterior</a><a href="#endermar">Lo que enviamos nosotros →</a></div>
+</section>
+
+
+<!-- endermar -->
+<section class="pantalla endermar" id="endermar">
+  <div class="cab">
+    <div class="txt">
+      <h2>Lo que depende de Endermar, no de vosotros</h2>
+      <p>Estas cinco cosas siguen mal en la web, pero no son culpa vuestra: faltan materiales nuestros. Las ponemos aquí para que quede claro que no están en vuestra lista y para que sepáis qué llega y cuándo.</p>
+    </div>
+    <div class="num">Pendiente<b>Endermar</b></div>
+  </div>
+
+  <ul>
+    <li><strong>Textos legales.</strong> El aviso legal y la política de privacidad están publicados pero vacíos. Los prepara nuestro departamento jurídico y os llegan con la razón social definitiva.</li>
+    <li><strong>Ofertas de empleo.</strong> Tres ofertas siguen situando el puesto en nuestra antigua central de Ripollet, que ya no existe. Recursos Humanos nos pasa el listado vigente.</li>
+    <li><strong>Menú del curso.</strong> El botón «Descargar el menú» de la página de Nutrición no lleva a ningún archivo. Os pasaremos el PDF del curso 2026-27, con los alérgenos de cada plato.</li>
+    <li><strong>Catálogos de servicios.</strong> Los botones de descarga siguen ocultos. Os diremos qué PDF va en cada página, o si retiramos los botones.</li>
+    <li><strong>Testimonios.</strong> Los que se ven ahora son de demostración. Estamos pidiendo autorización por escrito a tres clientes. Si no llegan a tiempo, publicaremos sin ese bloque.</li>
+  </ul>
+
+  <div class="franja">Nada de esto os bloquea: seguid con las diez correcciones anteriores.<span>En cuanto tengamos cada material os lo enviaremos en castellano y en catalán, en un único envío.</span></div>
+  <div class="navpie"><a href="#c10">← Anterior</a><a href="#portada">↑ Volver al índice</a></div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var TOTAL = 10;
+  function k(n,t){ return 'endermar-corr-'+t+'-'+n; }
+  function leer(){
+    try{
+      for(var n=1;n<=TOTAL;n++){
+        var c=document.querySelector('[data-c="'+n+'"]'); if(!c) continue;
+        c.checked = localStorage.getItem(k(n,'ok'))==='1';
+        var f=document.querySelector('[data-f="'+n+'"]'); if(f) f.value = localStorage.getItem(k(n,'fecha'))||'';
+        var p=document.querySelector('[data-p="'+n+'"]'); if(p) p.value = localStorage.getItem(k(n,'quien'))||'';
+        pintar(n);
+      }
+    }catch(e){}
+    contar();
+  }
+  function pintar(n){
+    var c=document.querySelector('[data-c="'+n+'"]');
+    var s=document.getElementById('c'+n);
+    if(s) s.classList.toggle('ok', !!(c&&c.checked));
+  }
+  function contar(){
+    var n=0; for(var i=1;i<=TOTAL;i++){var c=document.querySelector('[data-c="'+i+'"]'); if(c&&c.checked) n++;}
+    document.getElementById('prog').textContent = n+' de '+TOTAL+' corregidas';
+  }
+  document.addEventListener('change', function(e){
+    var el=e.target, n;
+    if(el.dataset && el.dataset.c){ n=el.dataset.c; try{localStorage.setItem(k(n,'ok'), el.checked?'1':'0');}catch(e2){} pintar(n); contar();
+      if(el.checked){ var f=document.querySelector('[data-f="'+n+'"]'); if(f&&!f.value){ var d=new Date(); f.value=('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear(); try{localStorage.setItem(k(n,'fecha'), f.value);}catch(e3){} } }
+    }
+    if(el.dataset && el.dataset.f){ try{localStorage.setItem(k(el.dataset.f,'fecha'), el.value);}catch(e4){} }
+    if(el.dataset && el.dataset.p){ try{localStorage.setItem(k(el.dataset.p,'quien'), el.value);}catch(e5){} }
+  });
+  document.addEventListener('input', function(e){
+    var el=e.target;
+    if(el.dataset && el.dataset.f){ try{localStorage.setItem(k(el.dataset.f,'fecha'), el.value);}catch(e4){} }
+    if(el.dataset && el.dataset.p){ try{localStorage.setItem(k(el.dataset.p,'quien'), el.value);}catch(e5){} }
+  });
+  window.copiarResumen = function(){
+    var l=['Correcciones web Endermar - estado a '+new Date().toLocaleDateString('es-ES'),''];
+    for(var n=1;n<=TOTAL;n++){
+      var s=document.getElementById('c'+n); if(!s) continue;
+      var t=s.querySelector('h2').textContent.trim();
+      var c=document.querySelector('[data-c="'+n+'"]');
+      var f=(document.querySelector('[data-f="'+n+'"]')||{}).value||'';
+      var p=(document.querySelector('[data-p="'+n+'"]')||{}).value||'';
+      l.push((c&&c.checked?'[HECHO] ':'[PENDIENTE] ')+'Nº '+n+' · '+t+(c&&c.checked&&(f||p)?' ('+[f,p].filter(Boolean).join(' · ')+')':''));
+    }
+    var txt=l.join('\n');
+    function fin(ok){ var b=event&&event.target; if(b){ var o=b.textContent; b.textContent= ok?'Resumen copiado':'Copiadlo a mano, abajo'; setTimeout(function(){b.textContent=o;},2500);} if(!ok){ window.prompt('Copiad este texto:', txt); } }
+    try{ navigator.clipboard.writeText(txt).then(function(){fin(true);}, function(){fin(false);}); }catch(e){ fin(false); }
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.target.tagName==='INPUT') return;
+    var ids=['portada','c1','c2','c3','c4','c5','c6','c7','c8','c9','c10','endermar'];
+    var cur=ids.indexOf((location.hash||'#portada').slice(1));
+    if(e.key==='ArrowRight' && cur<ids.length-1) location.hash='#'+ids[cur+1];
+    if(e.key==='ArrowLeft' && cur>0) location.hash='#'+ids[cur-1];
+  });
+  leer();
+})();
+</script>
+</body>
+</html>
